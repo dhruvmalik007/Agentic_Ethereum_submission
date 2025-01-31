@@ -8,16 +8,14 @@ applications:
         build:
           commands:
             - pnpm run build
+            - mv node_modules/ ./.amplify-hosting/node_modules/
         deploy:
           commands:
             - pnpm run dev
       artifacts:
-        baseDirectory: "apps/web/.next"
+        baseDirectory: .amplify-hosting
         files:
           - '**/*'
       cache:
         paths:
-          - .next/cache/**/*
           - node_modules/**/*
-      buildPath: /
-      appRoot: "."

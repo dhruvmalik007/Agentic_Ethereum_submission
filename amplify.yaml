@@ -2,24 +2,21 @@ version: 1
 applications:
   - 
     frontend:
+      buildPath: '/'
       phases:
         preBuild:
           commands:
             - npm install -g pnpm
+            - pnpm install
         build:
           commands:
             - pnpm run build --filter web
-            - mv apps/web/.next/ ./.amplify-hosting/.next/
-            - mv node_modules/ ./.amplify-hosting/node_modules/
-        deploy:
-          commands:
-            - pnpm run dev --filter web
+ 
       artifacts:
-        baseDirectory: .amplify-hosting
+        baseDirectory: apps/web/.next
         files:
           - '**/*'
       cache:
         paths:
           - node_modules/**/*
-    appRoot: "./"
-
+      appRoot: apps/web

@@ -20,4 +20,4 @@ applications:
           - .next/cache/**/*
           - node_modules/**/*
       buildPath: /
-      appRoot: apps/web
+      appRoot: "apps/web"

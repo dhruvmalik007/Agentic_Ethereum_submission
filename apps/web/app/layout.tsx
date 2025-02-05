@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
+import "@repo/ui/styles/globals.css";
+import {ThemeProvider, cn} from "@repo/ui"
+import { MainNav } from "./components/mainNav" ;
+import { SiteFooter } from "./components/site-footer";
+import { headerButtons } from "./config/header-options";
+import Link from "next/link"
+import {buttonVariants} from "@repo/ui"
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -22,9 +29,37 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <head/>
+      <body className={
+        cn(
+          "min-h-screen bg-background font-sans antialiased",
+          geistSans.variable,
+          geistMono.variable
+        )
+      }>
+      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <div className="flex min-h-screen flex-col">
+      <header className="container z-40 bg-background">
+        <div className="flex h-20 items-center justify-between py-6">
+          <MainNav items={headerButtons.options} />
+          <nav>
+            <Link
+              href="/login"
+              className={cn(
+                buttonVariants({ variant: "secondary", size: "sm" }),
+                "px-4"
+              )}
+            >
+              Login
+            </Link>
+          </nav>
+        </div>
+      </header>
+      <main className="flex-1">{children}</main>
+      <SiteFooter />
+    </div>
+        </ThemeProvider>
       </body>
     </html>
   );

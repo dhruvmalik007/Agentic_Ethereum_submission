@@ -1,0 +1,3 @@
+[submodule "packages/nethermind/nine-agent/nine"]
+	path = packages/nethermind/nine-agent/nine
+	url = https://github.com/NethermindEth/nine.git

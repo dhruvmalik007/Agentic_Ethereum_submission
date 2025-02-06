@@ -1,9 +1,9 @@
 import React from 'react';
 import { Menu, Check } from 'lucide-react';
-import { Button, Card, CardContent, CardHeader, CardTitle } from "@repo/ui";
-import { Sheet, SheetContent, SheetTrigger } from "@repo/ui/components/ui/sheet.js";
-import { Separator } from "@repo/ui/components/ui/separator.js";
-import { cn } from "@repo/ui/lib/utils.js";
+import { Card, CardContent, CardHeader, CardTitle, Button } from "@repo/ui";
+import { NavigationButton } from "./components/navigation-button";
+import { Sheet, SheetContent, SheetTrigger } from "@repo/ui/components/ui/sheet";
+import { Separator } from "@repo/ui/components/ui/separator";
 
 export default function Page() {
   return (
@@ -23,7 +23,7 @@ export default function Page() {
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
-            <Button>Sign Up</Button>
+            <NavigationButton href="/dashboard">Sign Up</NavigationButton>
           </div>
 
           {/* Mobile Menu */}
@@ -38,7 +38,7 @@ export default function Page() {
                 <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">About</a>
                 <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">Features</a>
                 <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
-                <Button className="w-full">Sign Up</Button>
+                <NavigationButton href="/dashboard" className="w-full">Sign Up</NavigationButton>
               </nav>
             </SheetContent>
           </Sheet>
@@ -55,7 +55,7 @@ export default function Page() {
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Create, innovate, and deploy with confidence. Our platform provides everything you need to bring your ideas to life.
             </p>
-            <Button size="lg">Get Started</Button>
+            <NavigationButton href="/dashboard" size="lg">Get Started</NavigationButton>
           </div>
         </div>
       </section>
@@ -152,7 +152,7 @@ export default function Page() {
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full">Get Started</Button>
+                  <NavigationButton href="/dashboard" className="w-full">Get Started</NavigationButton>
                 </CardContent>
               </Card>
             ))}

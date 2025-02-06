@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "@repo/ui/styles/globals.css";
-import {ThemeProvider, cn} from "@repo/ui"
+import "./styles/globals.css";
+import { ThemeProvider, cn } from "@repo/ui";
 import { MainNav } from "./components/mainNav" ;
 import { SiteFooter } from "./components/site-footer";
 import { headerButtons } from "./config/header-options";
@@ -10,11 +10,24 @@ import {buttonVariants} from "@repo/ui"
 
 
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
+  src: [
+    {
+      path: "./fonts/GeistVF.woff",
+      weight: "100 900",
+      style: "normal",
+    },
+  ],
   variable: "--font-geist-sans",
 });
+
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
+  src: [
+    {
+      path: "./fonts/GeistMonoVF.woff",
+      weight: "100 900",
+      style: "normal",
+    },
+  ],
   variable: "--font-geist-mono",
 });
 

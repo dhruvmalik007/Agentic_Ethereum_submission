@@ -12,6 +12,6 @@
       "@repo/ui/*": ["./*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.css", "postcss.config.mjs"],
+  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.css", "postcss.config.js"],
   "exclude": ["node_modules"]
 }

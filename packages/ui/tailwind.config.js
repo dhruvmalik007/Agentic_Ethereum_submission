@@ -1,10 +1,17 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
     darkMode: ["class"],
-    content: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}"],
+    content: [
+      "./src/**/*.{ts,tsx,js,jsx}",
+      "./components/**/*.{ts,tsx,js,jsx}",
+      "./lib/**/*.{ts,tsx,js,jsx}",
+      "./styles/**/*.css",
+      "./hooks/**/*.{ts,tsx,js,jsx}",
+      "../../apps/web/app/**/*.{ts,tsx,js,jsx}"
+    ],
     theme: {
     	extend: {
-    		colors: {
+    		colors: {	
     			border: 'hsl(var(--border))',
     			input: 'hsl(var(--input))',
     			ring: 'hsl(var(--ring))',
@@ -50,12 +57,18 @@ module.exports = {
     			}
     		},
     		borderRadius: {
-    			lg: '`var(--radius)`',
-    			md: '`calc(var(--radius) - 2px)`',
+    			lg: 'var(--radius)',
+    			md: 'calc(var(--radius) - 2px)',
     			sm: 'calc(var(--radius) - 4px)'
     		}
     	}
     },
-    plugins: [require("tailwindcss-animate")],
+    plugins: [require("tailwindcss-animate")
+
+		, 
+		require('@tailwindcss/forms'),
+
+		require('@tailwindcss/typography'),
+	
+	],
   }
-  

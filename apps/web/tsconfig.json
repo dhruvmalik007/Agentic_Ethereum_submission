@@ -11,6 +11,7 @@
   "baseUrl": ".",
   "paths": {
     "@/*": ["./*"],
+    "@repo/*": ["../../packages/*"]
   },
   "include": [
     "**/*.ts",

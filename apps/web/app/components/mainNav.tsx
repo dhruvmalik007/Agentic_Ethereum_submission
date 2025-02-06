@@ -3,9 +3,8 @@
 import * as React from "react"
 import Link from "next/link"
 import { useSelectedLayoutSegment } from "next/navigation"
-import { cn } from "@repo/ui"
 import {headerButtons, MainNavItem} from "../config/header-options"
-import {Icons} from "@repo/ui"
+import {Icons, cn} from "@repo/ui"
 import {siteConfig} from "../config/siteConfig"
 interface MainNavProps {
     items?: MainNavItem[]

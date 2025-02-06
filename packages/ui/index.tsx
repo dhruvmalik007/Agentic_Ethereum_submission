@@ -1,6 +1,19 @@
-export {Button, buttonVariants} from "@repo/ui/components/ui/button.js"
-export {SidebarProvider, SidebarTrigger} from "@repo/ui/components/ui/sidebar.js"
-export {ThemeProvider} from "@repo/ui/components/theme-provider.js"
-export {cn} from "@repo/ui/lib/utils.js"
-export {Icons} from "@repo/ui/components/Icons.js"
-export {Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent} from "@repo/ui/components/ui/card.js"
+export { Button, buttonVariants } from "./components/ui/button"
+export type { ButtonProps } from "./components/ui/button"
+export { Sheet, SheetContent, SheetTrigger } from "./components/ui/sheet"
+export { Tooltip, TooltipContent, TooltipTrigger } from "./components/ui/tooltip"
+export { Separator } from "./components/ui/separator"
+export { SidebarProvider, SidebarTrigger } from "./components/ui/sidebar"
+export { ThemeProvider } from "./components/theme-provider"
+export { cn } from "./lib/utils"
+export { Icons } from "./components/Icons"
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent } from "./components/ui/card"
+export { Dashboard } from "./components/ui/dashboard"
+export { NotebookCreator } from "./components/ui/notebook-creator"
+export { NotebookInterface } from "./components/ui/notebook-interface"
+export {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuTrigger,
+    DropdownMenuItem,
+} from './components/ui/dropdown-menu'

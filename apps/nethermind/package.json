@@ -1,0 +1,17 @@
+{
+  "name": "@repo/nethermind",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false",
+    "test": ""
+  },
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+    
+  }
+}

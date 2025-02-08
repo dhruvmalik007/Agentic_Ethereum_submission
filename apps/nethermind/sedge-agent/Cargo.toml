@@ -1,0 +1,55 @@
+[package]
+name = "sedge_agent"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.95"
+async-trait = "0.1.86"
+console-subscriber = "0.4.1"
+clap = { version = "4.5.27", features = ["derive"] }
+crb = { version = "0.0.28", git = "https://github.com/runtime-blocks/crb" }
+crb-system = { version = "0.0.28", git = "https://github.com/runtime-blocks/crb" }
+derive_more = { version = "1.0.0", features = ["full"] }
+dotenvy = "0.15.7"
+eframe = "0.30.0"
+egui = "0.30.0"
+env_logger = "0.11.6"
+envy = "0.4.2"
+futures = "0.3.31"
+ice9-core = { version = "0.0.1", path = "./nine/substance/core" }
+ice9-std = { version = "0.0.1", path = "./nine/substance/std" }
+libp2p = { version = "0.55.0", features = ["gossipsub", "macros", "mdns", "noise", "plaintext", "serde", "tcp", "tokio", "quic", "yamux"] }
+libp2p-stream = "0.3.0-alpha"
+futures-bounded = "0.2.4"
+log = "0.4.25"
+serde = "1.0.217"
+serde_json = "1.0.138"
+smallvec = "1.13.2"
+thiserror = "2.0.11"
+tokio = "1.43.0"
+tokio-stream = "0.1.17"
+toml = "0.8.19"
+dotenv = "0.15.0"
+
+# Add all the members as dependencies
+trading-assistant = { path = "./nine/examples/trading-assistant" }
+n9-app-line = { path = "./nine/particles/app-line" }
+ice-nine-plugin-app-stdio = { path = "./nine/particles/app-stdio" }
+ice-nine-plugin-chat-stdio = { path = "./nine/particles/chat-stdio" }
+ice-nine-plugin-chat-telegram = { path = "./nine/particles/chat-telegram" }
+ice-nine-plugin-control-chat = { path = "./nine/particles/control-chat" }
+##exchange_dydx = { path = "./nine/particles/exchange-dydx" }
+ice-nine-plugin-model-openai = { path = "./nine/particles/model-openai" }
+ice9-maker-gui = { path = "./nine/particles/tool-maker-gui" }
+ice9-maker-tui = { path = "./nine/particles/tool-maker-tui" }
+ice9 = { path = "./nine/substance/ice9" }
+n9 = { path = "./nine/substance/n9" }
+ui9 = { path = "./nine/substance/ui9" }
+ui9-app = { path = "./nine/substance/ui9-app" }
+ui9-codec = { path = "./nine/substance/ui9-codec" }
+ui9-dui = { path = "./nine/substance/ui9-dui" }
+ui9-maker = { path = "./nine/substance/ui9-maker" }
+ui9-mesh = { path = "./nine/substance/ui9-mesh" }
+ui9-tracers = { path = "./nine/substance/ui9-tracers" }
+ui9-tui = { path = "./nine/substance/ui9-tui" }

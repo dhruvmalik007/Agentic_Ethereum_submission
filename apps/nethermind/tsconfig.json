@@ -1,0 +1,22 @@
+{
+    "extends": "@repo/typescript-config/base.json",
+    "typeAcquisition": {
+      "enable": true
+    },
+    "compilerOptions": {
+      "baseUrl": ".",
+      "target": "ES2022",
+      "module": "ESNext",
+      "moduleResolution": "node",
+      "paths": {
+        "@repo/autonome": ["../*"],
+        "@repo/autonome/*": ["./*"]
+      },
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true
+    },
+    "include": ["**/*.ts", "**/*.tsx", "**/*.js"],
+    "exclude": ["node_modules"]
+}

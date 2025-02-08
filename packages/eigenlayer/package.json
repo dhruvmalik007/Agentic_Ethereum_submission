@@ -1,0 +1,25 @@
+{
+  "name": "eigenlayer",
+  "version": "0.0.1",
+  "description": "setting up package that instantiates for agent to orchestate the offchain service registered to the AVS",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@langchain/community": "^0.3.28",
+    "@langchain/openai": "^0.4.2",
+    "@langchain/weaviate": "^0.1.0",
+    "dotenv": "^16.4.7",
+    "langchain": "^0.3.15",
+    "octokit": "^4.1.1",
+    "uuid": "^11.0.5",
+    "weaviate-client": "^3.3.6",
+    "weaviate-ts-client": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.1"
+  }
+}
